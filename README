@@ -1,3 +1,10 @@
+Quants
+------
+Created by Lars Moastuen (lars@moastuen.com).
+Licensed under the MIT license (see LICENSE).
+
+Introduction
+------------
 This library implements basic unit support for .NET. The 
 library has been inspired by Boost.Units and the native unit support in
 F#, but differs in a few key aspect (see list below). The goal of 
