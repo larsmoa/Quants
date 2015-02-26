@@ -1,9 +1,9 @@
 ﻿using System;
-using Moa.Units;
-using Moa.Units.Catalogs;
-using Moa.Units.Catalogs.SI;
-using Moa.Units.Quantities;
-using Moa.Units.Units;
+using Quants;
+using Quants.Catalogs;
+using Quants.Catalogs.SI;
+using Quants.Quantities;
+using Quants.Units;
 
 namespace BasicExample
 {

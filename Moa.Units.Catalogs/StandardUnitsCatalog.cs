@@ -1,8 +1,6 @@
-﻿using Moa.Units.Conversion;
-using Moa.Units.Systems;
-using Moa.Units.Units;
+﻿using Quants.Units;
 
-namespace Moa.Units.Catalogs
+namespace Quants.Catalogs
 {
     /// <summary>
     /// Catalog of units for the dimensions in <see cref="StandardDimensionsCatalog" />. This class

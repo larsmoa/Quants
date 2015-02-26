@@ -1,10 +1,10 @@
-﻿using Moa.Units;
-using Moa.Units.Catalogs;
-using Moa.Units.Catalogs.SI;
-using Moa.Units.Quantities;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+using Quants;
+using Quants.Catalogs;
+using Quants.Catalogs.SI;
+using Quants.Quantities;
 
-namespace Tests.Moa.Units.Catalogs.SI
+namespace Tests.Quants.Catalogs.SI
 {
     [TestFixture, Category(Categories.Integrationtest)]
     public class SiIntegrationTests

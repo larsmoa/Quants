@@ -1,10 +1,10 @@
 ﻿using System;
-using Moa.Units;
-using Moa.Units.Quantities;
 using Moq;
 using NUnit.Framework;
+using Quants;
+using Quants.Quantities;
 
-namespace Tests.Moa.Units.Quantities
+namespace Tests.Quants.Quantities
 {
     [TestFixture]
     public class OperationStoreTests

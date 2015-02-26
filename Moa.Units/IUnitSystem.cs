@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Moa.Units
+namespace Quants
 {
     /// <summary>
     /// Represents a unit system with dimensions (IDimension) and at least one unit (IUnit) per measurement.

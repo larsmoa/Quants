@@ -1,4 +1,4 @@
-﻿namespace Moa.Units
+﻿namespace Quants
 {
     /// <summary>
     /// Special unit for describing the unit of dimensionless quantities.

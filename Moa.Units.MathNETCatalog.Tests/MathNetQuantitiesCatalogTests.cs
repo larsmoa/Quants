@@ -1,12 +1,12 @@
 ﻿using MathNet.Numerics.LinearAlgebra;
 using MathNet.Numerics.LinearAlgebra.Double;
-using Moa.Units;
-using Moa.Units.MathNETCatalog;
-using Moa.Units.Quantities;
 using Moq;
 using NUnit.Framework;
+using Quants;
+using Quants.MathNETCatalog;
+using Quants.Quantities;
 
-namespace Tests.Moa.Units.MathNETCatalog
+namespace Tests.Quantss.MathNETCatalog
 {
     [TestFixture]
     public class MathNetQuantitiesCatalogTests

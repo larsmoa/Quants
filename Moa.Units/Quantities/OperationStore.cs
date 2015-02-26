@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Moa.Units.Quantities
+namespace Quants.Quantities
 {
     /// <summary>
     /// Class that maintains a register of operations that typically perform arithmetic 

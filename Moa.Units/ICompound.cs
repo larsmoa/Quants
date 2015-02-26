@@ -1,4 +1,4 @@
-﻿namespace Moa.Units
+﻿namespace Quants
 {
     /// <summary>
     /// Base interface for "compound" classes. This is used for compound units and dimensions.

@@ -1,9 +1,9 @@
-﻿using Moa.Units;
-using Moa.Units.Dimensions;
-using Moq;
+﻿using Moq;
 using NUnit.Framework;
+using Quants;
+using Quants.Dimensions;
 
-namespace Tests.Moa.Units.Dimensions
+namespace Tests.Quants.Dimensions
 {
     [TestFixture]
     public class CompoundDimensionTests

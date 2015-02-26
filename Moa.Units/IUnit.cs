@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Moa.Units
+namespace Quants
 {
     /// <summary>
     /// Represents an immutable unit with a short and long textual representation. In addition

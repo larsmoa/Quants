@@ -1,4 +1,4 @@
-﻿namespace Moa.Units.Systems
+﻿namespace Quants.Systems
 {
     /// <summary>
     /// Interface for factories that create unit system instances.

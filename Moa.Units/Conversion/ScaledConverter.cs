@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Moa.Units.Conversion
+namespace Quants.Conversion
 {
     /// <summary>
     /// Value converter that for converting between two units that relate

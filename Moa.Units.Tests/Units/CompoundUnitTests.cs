@@ -1,9 +1,9 @@
-﻿using Moa.Units;
-using Moa.Units.Units;
-using Moq;
+﻿using Moq;
 using NUnit.Framework;
+using Quants;
+using Quants.Units;
 
-namespace Tests.Moa.Units.Units
+namespace Tests.Quants.Units
 {
     [TestFixture]
     public class CompoundUnitTests

@@ -1,4 +1,4 @@
-﻿namespace Moa.Units
+﻿namespace Quants
 {
     /// <summary>
     /// Special measurement for dimensionless quantities, or scalars.

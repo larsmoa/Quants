@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Moa.Units
+namespace Quants
 {
     /// <summary>
     /// Represents a physical quantity, e.g. "Volume" or "Length". A dimensions

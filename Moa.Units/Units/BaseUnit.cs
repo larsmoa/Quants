@@ -1,4 +1,4 @@
-﻿namespace Moa.Units.Units
+﻿namespace Quants.Units
 {
     /// <summary>
     /// Class that represents a base unit, e.g. "m". Such units may be building blocks of other, more complex 

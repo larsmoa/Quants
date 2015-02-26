@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{7D29D6D7-6DE9-4192-8052-FB6C77E624E9}</ProjectGuid>
+    <ProjectGuid>{A1CF189D-E8F2-47FF-BE65-2E08D058CFCB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Moa.Units</RootNamespace>
-    <AssemblyName>Moa.Units</AssemblyName>
+    <RootNamespace>Tests.Quantss.MathNETCatalog</RootNamespace>
+    <AssemblyName>Quants.MathNETCatalog.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -21,8 +21,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>
-    </DocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,12 +30,23 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\Moa.Units.xml</DocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MathNet.Numerics">
+      <HintPath>..\packages\MathNet.Numerics.3.5.0\lib\net40\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq, Version=4.2.1502.911, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Moq.4.2.1502.0911\lib\net40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,33 +54,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractCompound.cs" />
-    <Compile Include="AbstractDimension.cs" />
-    <Compile Include="AbstractUnit.cs" />
-    <Compile Include="Conversion\CompositeConverter.cs" />
-    <Compile Include="Conversion\ScaledConverter.cs" />
-    <Compile Include="Dimensions\BaseDimension.cs" />
-    <Compile Include="Dimensions\CompoundDimension.cs" />
-    <Compile Include="Dimensions\DimensionCreator.cs" />
-    <Compile Include="ICompound.cs" />
-    <Compile Include="IValueConverter.cs" />
-    <Compile Include="Quantities\ArithmeticsStore.cs" />
-    <Compile Include="Quantities\OperationStore.cs" />
-    <Compile Include="Quantities\Quantity.cs" />
-    <Compile Include="Quantities\QuantityBase.cs" />
-    <Compile Include="Systems\DimensionContainer.cs" />
-    <Compile Include="Systems\IUnitSystemFactory.cs" />
-    <Compile Include="Systems\UnitSystem.cs" />
-    <Compile Include="Units\BaseUnit.cs" />
-    <Compile Include="Units\CompoundUnit.cs" />
-    <Compile Include="Dimsensionless.cs" />
-    <Compile Include="IDimension.cs" />
-    <Compile Include="IUnit.cs" />
-    <Compile Include="IUnitSystem.cs" />
+    <Compile Include="MathNetQuantitiesCatalogTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitCombiner.cs" />
-    <Compile Include="Unitless.cs" />
-    <Compile Include="Units\UnitCreator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Moa.Units.Catalogs\Quants.Catalogs.csproj">
+      <Project>{194FB1AD-CB6A-4CEA-891E-A730617EED4F}</Project>
+      <Name>Quants.Catalogs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Moa.Units.MathNETCatalog\Quants.MathNETCatalog.csproj">
+      <Project>{F102975C-C3CE-4669-AA72-84C9397539AA}</Project>
+      <Name>Quants.MathNETCatalog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Moa.Units\Quants.csproj">
+      <Project>{7D29D6D7-6DE9-4192-8052-FB6C77E624E9}</Project>
+      <Name>Quants</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

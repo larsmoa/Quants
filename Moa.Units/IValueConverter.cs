@@ -1,4 +1,4 @@
-﻿namespace Moa.Units
+﻿namespace Quants
 {
     /// <summary>
     /// Interface for unit conversion from a source unit, to a target unit.

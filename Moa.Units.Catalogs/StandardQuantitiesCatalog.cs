@@ -1,7 +1,7 @@
-﻿using Moa.Units.Quantities;
-using Moa.Units.Units;
+﻿using Quants.Quantities;
+using Quants.Units;
 
-namespace Moa.Units.Catalogs
+namespace Quants.Catalogs
 {
     /// <summary>
     /// Class that contains definitions of the default <see cref="Quantity{T}"/> and

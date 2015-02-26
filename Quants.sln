@@ -2,19 +2,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moa.Units", "Moa.Units\Moa.Units.csproj", "{7D29D6D7-6DE9-4192-8052-FB6C77E624E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quants", "Moa.Units\Quants.csproj", "{7D29D6D7-6DE9-4192-8052-FB6C77E624E9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BD4D3B7E-E85D-4346-A067-E545A14506F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moa.Units.Tests", "Moa.Units.Tests\Moa.Units.Tests.csproj", "{A90406EC-D89D-497D-934A-13BBF10F564E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quants.Tests", "Moa.Units.Tests\Quants.Tests.csproj", "{A90406EC-D89D-497D-934A-13BBF10F564E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moa.Units.Catalogs", "Moa.Units.Catalogs\Moa.Units.Catalogs.csproj", "{194FB1AD-CB6A-4CEA-891E-A730617EED4F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quants.Catalogs", "Moa.Units.Catalogs\Quants.Catalogs.csproj", "{194FB1AD-CB6A-4CEA-891E-A730617EED4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moa.Units.Catalogs.Tests", "Moa.Units.Catalogs.Tests\Moa.Units.Catalogs.Tests.csproj", "{FC9EE190-C7A8-4852-A78A-174821CB3A64}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quants.Catalogs.Tests", "Moa.Units.Catalogs.Tests\Quants.Catalogs.Tests.csproj", "{FC9EE190-C7A8-4852-A78A-174821CB3A64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moa.Units.MathNETCatalog", "Moa.Units.MathNETCatalog\Moa.Units.MathNETCatalog.csproj", "{F102975C-C3CE-4669-AA72-84C9397539AA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quants.MathNETCatalog", "Moa.Units.MathNETCatalog\Quants.MathNETCatalog.csproj", "{F102975C-C3CE-4669-AA72-84C9397539AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moa.Units.MathNETCatalog.Tests", "Moa.Units.MathNETCatalog.Tests\Moa.Units.MathNETCatalog.Tests.csproj", "{A1CF189D-E8F2-47FF-BE65-2E08D058CFCB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quants.MathNETCatalog.Tests", "Moa.Units.MathNETCatalog.Tests\Quants.MathNETCatalog.Tests.csproj", "{A1CF189D-E8F2-47FF-BE65-2E08D058CFCB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{103E3487-0EE0-4D8E-B932-389C165D3ECF}"
 EndProject

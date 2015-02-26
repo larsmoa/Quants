@@ -1,7 +1,7 @@
-﻿using Moa.Units.Quantities;
-using Moa.Units.Units;
+﻿using Quants.Quantities;
+using Quants.Units;
 
-namespace Moa.Units.MathNETCatalog
+namespace Quants.MathNETCatalog
 {
     public static class MathNetQuantitiesCatalog
     {

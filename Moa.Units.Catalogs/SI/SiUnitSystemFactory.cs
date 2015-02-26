@@ -1,7 +1,7 @@
-﻿using Moa.Units.Conversion;
-using Moa.Units.Systems;
+﻿using Quants.Conversion;
+using Quants.Systems;
 
-namespace Moa.Units.Catalogs.SI
+namespace Quants.Catalogs.SI
 {
     /// <summary>
     /// Factory that creates UnitSystem instances that contains definitions for 

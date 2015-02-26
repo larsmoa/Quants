@@ -1,6 +1,6 @@
-﻿using Moa.Units.Dimensions;
+﻿using Quants.Dimensions;
 
-namespace Moa.Units.Catalogs
+namespace Quants.Catalogs
 {
     /// <summary>
     /// Contains definitions of elementary dimensions. The list is from

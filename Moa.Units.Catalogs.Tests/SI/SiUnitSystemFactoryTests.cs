@@ -1,9 +1,9 @@
-﻿using Moa.Units;
-using Moa.Units.Catalogs;
-using Moa.Units.Catalogs.SI;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+using Quants;
+using Quants.Catalogs;
+using Quants.Catalogs.SI;
 
-namespace Tests.Moa.Units.Catalogs.SI
+namespace Tests.Quants.Catalogs.SI
 {
     [TestFixture]
     public class SiUnitSystemFactoryTests

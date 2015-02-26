@@ -1,4 +1,4 @@
-﻿namespace Moa.Units.Dimensions
+﻿namespace Quants.Dimensions
 {
     /// <summary>
     /// Represents a base dimension (as opposition to a composite dimension). Such

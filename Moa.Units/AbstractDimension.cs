@@ -1,4 +1,4 @@
-﻿namespace Moa.Units
+﻿namespace Quants
 {
     /// <summary>
     /// Common base class for (most) IDimensions. Provides default

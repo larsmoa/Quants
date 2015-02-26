@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Moa.Units.Quantities
+namespace Quants.Quantities
 {
     /// <summary>
     /// Immutable quantity (value with unit).

@@ -1,4 +1,4 @@
-﻿namespace Moa.Units.Dimensions
+﻿namespace Quants.Dimensions
 {
     /// <summary>
     /// Class that enables creating combined dimensions in a fluent manner.

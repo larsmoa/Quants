@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Moa.Units.Conversion
+namespace Quants.Conversion
 {
     /// <summary>
     /// Converter that converts between two units through a series of converters, e.g.

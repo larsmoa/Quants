@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Moa.Units.Systems
+namespace Quants.Systems
 {
     /// <summary>
     /// Standard implementation of IUnitSystem. Supports conversion between units.

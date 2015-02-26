@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Moa.Units.Conversion;
+using Quants.Conversion;
 
-namespace Moa.Units.Systems
+namespace Quants.Systems
 {
     /// <summary>
     /// Convinience class for implementing IUnitSystem. Responsible for providing units

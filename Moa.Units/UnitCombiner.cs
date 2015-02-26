@@ -1,6 +1,6 @@
-﻿using Moa.Units.Units;
+﻿using Quants.Units;
 
-namespace Moa.Units
+namespace Quants
 {
     /// <summary>
     /// Class for combining two or more units into a new unit, e.g. from multiplication.

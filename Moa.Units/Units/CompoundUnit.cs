@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Moa.Units.Dimensions;
+using Quants.Dimensions;
 
-namespace Moa.Units.Units
+namespace Quants.Units
 {
     /// <summary>
     /// Unit that consists of zero or more dividends and zero or more divisors, e.g.

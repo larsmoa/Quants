@@ -1,11 +1,11 @@
 ﻿using System;
-using Moa.Units;
-using Moa.Units.Catalogs;
-using Moa.Units.Quantities;
 using Moq;
 using NUnit.Framework;
+using Quants;
+using Quants.Catalogs;
+using Quants.Quantities;
 
-namespace Tests.Moa.Units.Catalogs
+namespace Tests.Quants.Catalogs
 {
     [TestFixture, Category(Categories.Integrationtest)]
     public class StandardQuantitiesCatalogTests

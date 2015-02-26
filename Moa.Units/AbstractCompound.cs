@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Moa.Units
+namespace Quants
 {
     /// <summary>
     /// Common base class for "compounds" (combined units or dimensions). Implements internal logic.

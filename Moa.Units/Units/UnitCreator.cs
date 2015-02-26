@@ -1,4 +1,4 @@
-﻿namespace Moa.Units.Units
+﻿namespace Quants.Units
 {
     /// <summary>
     /// Class that enables creating combined units in a fluent manner.

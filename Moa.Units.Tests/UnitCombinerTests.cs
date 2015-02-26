@@ -1,10 +1,10 @@
-﻿using Moa.Units;
-using Moa.Units.Dimensions;
-using Moa.Units.Units;
-using Moq;
+﻿using Moq;
 using NUnit.Framework;
+using Quants;
+using Quants.Dimensions;
+using Quants.Units;
 
-namespace Tests.Moa.Units
+namespace Tests.Quants
 {
     [TestFixture]
     public class UnitCombinerTests

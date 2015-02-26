@@ -1,6 +1,6 @@
-﻿using Moa.Units.Quantities;
+﻿using Quants.Quantities;
 
-namespace Tests.Moa.Units
+namespace Tests.Quants
 {
     /// <summary>
     /// Moq doesn't support mocking delegates, but creating an interface is a good workaround.

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Moa.Units.Quantities
+namespace Quants.Quantities
 {
     /// <summary>
     /// Base class for quantities. This class is an over-simplification of quantities, but 

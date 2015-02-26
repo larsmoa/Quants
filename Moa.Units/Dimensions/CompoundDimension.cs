@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Moa.Units.Dimensions
+namespace Quants.Dimensions
 {
     /// <summary>
     /// Dimension that consists of zero or more dividends and zero or more divisors, e.g.

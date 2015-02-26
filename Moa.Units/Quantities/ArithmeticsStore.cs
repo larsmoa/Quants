@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Moa.Units.Quantities
+namespace Quants.Quantities
 {
     /// <summary>
     /// Singleton class responsible for maintaining callbacks for performing arithmetics on

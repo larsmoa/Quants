@@ -1,4 +1,4 @@
-﻿namespace Tests.Moa.Units.Catalogs
+﻿namespace Tests.Quants.Catalogs
 {
     public static class Categories
     {

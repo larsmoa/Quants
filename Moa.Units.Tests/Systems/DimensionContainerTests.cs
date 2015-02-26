@@ -1,10 +1,10 @@
 ﻿using System;
-using Moa.Units;
-using Moa.Units.Systems;
 using Moq;
 using NUnit.Framework;
+using Quants;
+using Quants.Systems;
 
-namespace Tests.Moa.Units.Systems
+namespace Tests.Quants.Systems
 {
     // Moq doesn't support mocking delegates, but creating an interface is a good workaround
     public interface ICreateAdjacentValueConverterDelegateFunctor

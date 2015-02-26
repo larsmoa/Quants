@@ -1,10 +1,10 @@
 ﻿using System;
-using Moa.Units;
-using Moa.Units.Conversion;
 using Moq;
 using NUnit.Framework;
+using Quants;
+using Quants.Conversion;
 
-namespace Tests.Moa.Units.Conversion
+namespace Tests.Quants.Conversion
 {
     [TestFixture]
     public class ScaledConverterTests

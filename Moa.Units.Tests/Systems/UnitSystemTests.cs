@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq;
-using Moa.Units;
-using Moa.Units.Systems;
 using Moq;
 using NUnit.Framework;
+using Quants;
+using Quants.Systems;
 
-namespace Tests.Moa.Units.Systems
+namespace Tests.Quants.Systems
 {
     [TestFixture]
     public class UnitSystemTests
