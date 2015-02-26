@@ -13,20 +13,20 @@ namespace Moa.Units.MathNETCatalog
             _hasRegisteredOperations = true;
             
             // Multiplication
-            ArithmeticsStore.Instance.RegisterMultiplyOperation<MathNet.Numerics.LinearAlgebra.Double.Matrix,
-                                                                MathNet.Numerics.LinearAlgebra.Double.Matrix>(MultiplyMatrixMatrix);
-            ArithmeticsStore.Instance.RegisterMultiplyOperation<MathNet.Numerics.LinearAlgebra.Double.Matrix,
-                                                                MathNet.Numerics.LinearAlgebra.Double.Vector>(MultiplyMatrixVector);
-            ArithmeticsStore.Instance.RegisterMultiplyOperation<MathNet.Numerics.LinearAlgebra.Double.Vector,
-                                                                MathNet.Numerics.LinearAlgebra.Double.Matrix>(MultiplyVectorMatrix);
-            ArithmeticsStore.Instance.RegisterMultiplyOperation<float, MathNet.Numerics.LinearAlgebra.Double.Matrix>(MultiplyFloatMatrix);
-            ArithmeticsStore.Instance.RegisterMultiplyOperation<MathNet.Numerics.LinearAlgebra.Double.Matrix, float>(MultiplyMatrixFloat);
-            ArithmeticsStore.Instance.RegisterMultiplyOperation<double, MathNet.Numerics.LinearAlgebra.Double.Matrix>(MultiplyDoubleMatrix);
-            ArithmeticsStore.Instance.RegisterMultiplyOperation<MathNet.Numerics.LinearAlgebra.Double.Matrix, double>(MultiplyMatrixDouble);
-            ArithmeticsStore.Instance.RegisterMultiplyOperation<float, MathNet.Numerics.LinearAlgebra.Double.Vector>(MultiplyFloatVector);
-            ArithmeticsStore.Instance.RegisterMultiplyOperation<MathNet.Numerics.LinearAlgebra.Double.Vector, float>(MultiplyVectorFloat);
-            ArithmeticsStore.Instance.RegisterMultiplyOperation<double, MathNet.Numerics.LinearAlgebra.Double.Vector>(MultiplyDoubleVector);
-            ArithmeticsStore.Instance.RegisterMultiplyOperation<MathNet.Numerics.LinearAlgebra.Double.Vector, double>(MultiplyVectorDouble);
+            ArithmeticsStore.Instance.RegisterMultiplyOperation<MathNet.Numerics.LinearAlgebra.Matrix<double>,
+                                                                MathNet.Numerics.LinearAlgebra.Matrix<double>>(MultiplyMatrixMatrix);
+            ArithmeticsStore.Instance.RegisterMultiplyOperation<MathNet.Numerics.LinearAlgebra.Matrix<double>,
+                                                                MathNet.Numerics.LinearAlgebra.Vector<double>>(MultiplyMatrixVector);
+            ArithmeticsStore.Instance.RegisterMultiplyOperation<MathNet.Numerics.LinearAlgebra.Vector<double>,
+                                                                MathNet.Numerics.LinearAlgebra.Matrix<double>>(MultiplyVectorMatrix);
+            ArithmeticsStore.Instance.RegisterMultiplyOperation<float, MathNet.Numerics.LinearAlgebra.Matrix<double>>(MultiplyFloatMatrix);
+            ArithmeticsStore.Instance.RegisterMultiplyOperation<MathNet.Numerics.LinearAlgebra.Matrix<double>, float>(MultiplyMatrixFloat);
+            ArithmeticsStore.Instance.RegisterMultiplyOperation<double, MathNet.Numerics.LinearAlgebra.Matrix<double>>(MultiplyDoubleMatrix);
+            ArithmeticsStore.Instance.RegisterMultiplyOperation<MathNet.Numerics.LinearAlgebra.Matrix<double>, double>(MultiplyMatrixDouble);
+            ArithmeticsStore.Instance.RegisterMultiplyOperation<float, MathNet.Numerics.LinearAlgebra.Vector<double>>(MultiplyFloatVector);
+            ArithmeticsStore.Instance.RegisterMultiplyOperation<MathNet.Numerics.LinearAlgebra.Vector<double>, float>(MultiplyVectorFloat);
+            ArithmeticsStore.Instance.RegisterMultiplyOperation<double, MathNet.Numerics.LinearAlgebra.Vector<double>>(MultiplyDoubleVector);
+            ArithmeticsStore.Instance.RegisterMultiplyOperation<MathNet.Numerics.LinearAlgebra.Vector<double>, double>(MultiplyVectorDouble);
         }
 
         #region Multiply
@@ -38,42 +38,42 @@ namespace Moa.Units.MathNETCatalog
 
         private static QuantityBase MultiplyMatrixMatrix(QuantityBase left, QuantityBase right)
         {
-            Quantity<MathNet.Numerics.LinearAlgebra.Double.Matrix> leftQ = (Quantity<MathNet.Numerics.LinearAlgebra.Double.Matrix>) left;
-            Quantity<MathNet.Numerics.LinearAlgebra.Double.Matrix> rightQ = (Quantity<MathNet.Numerics.LinearAlgebra.Double.Matrix>) right;
+            Quantity<MathNet.Numerics.LinearAlgebra.Matrix<double>> leftQ = (Quantity<MathNet.Numerics.LinearAlgebra.Matrix<double>>) left;
+            Quantity<MathNet.Numerics.LinearAlgebra.Matrix<double>> rightQ = (Quantity<MathNet.Numerics.LinearAlgebra.Matrix<double>>) right;
             
             IUnit unit = MultiplyUnits(left, right);
-            MathNet.Numerics.LinearAlgebra.Double.Matrix matrix = leftQ.Value*rightQ.Value;
-            return new Quantity<MathNet.Numerics.LinearAlgebra.Double.Matrix>(matrix, unit);
+            MathNet.Numerics.LinearAlgebra.Matrix<double> matrix = leftQ.Value*rightQ.Value;
+            return new Quantity<MathNet.Numerics.LinearAlgebra.Matrix<double>>(matrix, unit);
         }
 
         private static QuantityBase MultiplyMatrixVector(QuantityBase left, QuantityBase right)
         {
-            Quantity<MathNet.Numerics.LinearAlgebra.Double.Matrix> leftQ = (Quantity<MathNet.Numerics.LinearAlgebra.Double.Matrix>)left;
-            Quantity<MathNet.Numerics.LinearAlgebra.Double.Vector> rightQ = (Quantity<MathNet.Numerics.LinearAlgebra.Double.Vector>)right;
+            Quantity<MathNet.Numerics.LinearAlgebra.Matrix<double>> leftQ = (Quantity<MathNet.Numerics.LinearAlgebra.Matrix<double>>)left;
+            Quantity<MathNet.Numerics.LinearAlgebra.Vector<double>> rightQ = (Quantity<MathNet.Numerics.LinearAlgebra.Vector<double>>)right;
 
             IUnit unit = MultiplyUnits(left, right);
-            MathNet.Numerics.LinearAlgebra.Double.Vector vector = leftQ.Value * rightQ.Value;
-            return new Quantity<MathNet.Numerics.LinearAlgebra.Double.Vector>(vector, unit);
+            MathNet.Numerics.LinearAlgebra.Vector<double> vector = leftQ.Value * rightQ.Value;
+            return new Quantity<MathNet.Numerics.LinearAlgebra.Vector<double>>(vector, unit);
         }
 
         private static QuantityBase MultiplyVectorMatrix(QuantityBase left, QuantityBase right)
         {
-            Quantity<MathNet.Numerics.LinearAlgebra.Double.Vector> leftQ = (Quantity<MathNet.Numerics.LinearAlgebra.Double.Vector>)left;
-            Quantity<MathNet.Numerics.LinearAlgebra.Double.Matrix> rightQ = (Quantity<MathNet.Numerics.LinearAlgebra.Double.Matrix>)right;
+            Quantity<MathNet.Numerics.LinearAlgebra.Vector<double>> leftQ = (Quantity<MathNet.Numerics.LinearAlgebra.Vector<double>>)left;
+            Quantity<MathNet.Numerics.LinearAlgebra.Matrix<double>> rightQ = (Quantity<MathNet.Numerics.LinearAlgebra.Matrix<double>>)right;
 
             IUnit unit = MultiplyUnits(left, right);
-            MathNet.Numerics.LinearAlgebra.Double.Vector vector = leftQ.Value * rightQ.Value;
-            return new Quantity<MathNet.Numerics.LinearAlgebra.Double.Vector>(vector, unit);
+            MathNet.Numerics.LinearAlgebra.Vector<double> vector = leftQ.Value * rightQ.Value;
+            return new Quantity<MathNet.Numerics.LinearAlgebra.Vector<double>>(vector, unit);
         }
 
         private static QuantityBase MultiplyFloatMatrix(QuantityBase left, QuantityBase right)
         {
             Quantity<float> leftQ = (Quantity<float>) left;
-            Quantity<MathNet.Numerics.LinearAlgebra.Double.Matrix> rightQ = (Quantity<MathNet.Numerics.LinearAlgebra.Double.Matrix>) right;
+            Quantity<MathNet.Numerics.LinearAlgebra.Matrix<double>> rightQ = (Quantity<MathNet.Numerics.LinearAlgebra.Matrix<double>>) right;
 
             IUnit unit = MultiplyUnits(left, right);
-            MathNet.Numerics.LinearAlgebra.Double.Matrix matrix = leftQ.Value * rightQ.Value;
-            return new Quantity<MathNet.Numerics.LinearAlgebra.Double.Matrix>(matrix, unit);
+            MathNet.Numerics.LinearAlgebra.Matrix<double> matrix = leftQ.Value * rightQ.Value;
+            return new Quantity<MathNet.Numerics.LinearAlgebra.Matrix<double>>(matrix, unit);
         }
 
         private static QuantityBase MultiplyMatrixFloat(QuantityBase left, QuantityBase right)
@@ -84,11 +84,11 @@ namespace Moa.Units.MathNETCatalog
         private static QuantityBase MultiplyDoubleMatrix(QuantityBase left, QuantityBase right)
         {
             Quantity<double> leftQ = (Quantity<double>)left;
-            Quantity<MathNet.Numerics.LinearAlgebra.Double.Matrix> rightQ = (Quantity<MathNet.Numerics.LinearAlgebra.Double.Matrix>)right;
+            Quantity<MathNet.Numerics.LinearAlgebra.Matrix<double>> rightQ = (Quantity<MathNet.Numerics.LinearAlgebra.Matrix<double>>)right;
 
             IUnit unit = MultiplyUnits(left, right);
-            MathNet.Numerics.LinearAlgebra.Double.Matrix matrix = leftQ.Value * rightQ.Value;
-            return new Quantity<MathNet.Numerics.LinearAlgebra.Double.Matrix>(matrix, unit);
+            MathNet.Numerics.LinearAlgebra.Matrix<double> matrix = leftQ.Value * rightQ.Value;
+            return new Quantity<MathNet.Numerics.LinearAlgebra.Matrix<double>>(matrix, unit);
         }
 
         private static QuantityBase MultiplyMatrixDouble(QuantityBase left, QuantityBase right)
@@ -99,11 +99,11 @@ namespace Moa.Units.MathNETCatalog
         private static QuantityBase MultiplyFloatVector(QuantityBase left, QuantityBase right)
         {
             Quantity<float> leftQ = (Quantity<float>)left;
-            Quantity<MathNet.Numerics.LinearAlgebra.Double.Vector> rightQ = (Quantity<MathNet.Numerics.LinearAlgebra.Double.Vector>)right;
+            Quantity<MathNet.Numerics.LinearAlgebra.Vector<double>> rightQ = (Quantity<MathNet.Numerics.LinearAlgebra.Vector<double>>)right;
 
             IUnit unit = MultiplyUnits(left, right);
-            MathNet.Numerics.LinearAlgebra.Double.Vector vector = leftQ.Value * rightQ.Value;
-            return new Quantity<MathNet.Numerics.LinearAlgebra.Double.Vector>(vector, unit);
+            MathNet.Numerics.LinearAlgebra.Vector<double> vector = leftQ.Value * rightQ.Value;
+            return new Quantity<MathNet.Numerics.LinearAlgebra.Vector<double>>(vector, unit);
         }
 
         private static QuantityBase MultiplyVectorFloat(QuantityBase left, QuantityBase right)
@@ -114,11 +114,11 @@ namespace Moa.Units.MathNETCatalog
         private static QuantityBase MultiplyDoubleVector(QuantityBase left, QuantityBase right)
         {
             Quantity<double> leftQ = (Quantity<double>)left;
-            Quantity<MathNet.Numerics.LinearAlgebra.Double.Vector> rightQ = (Quantity<MathNet.Numerics.LinearAlgebra.Double.Vector>)right;
+            Quantity<MathNet.Numerics.LinearAlgebra.Vector<double>> rightQ = (Quantity<MathNet.Numerics.LinearAlgebra.Vector<double>>)right;
 
             IUnit unit = MultiplyUnits(left, right);
-            MathNet.Numerics.LinearAlgebra.Double.Vector vector = leftQ.Value * rightQ.Value;
-            return new Quantity<MathNet.Numerics.LinearAlgebra.Double.Vector>(vector, unit);
+            MathNet.Numerics.LinearAlgebra.Vector<double> vector = leftQ.Value * rightQ.Value;
+            return new Quantity<MathNet.Numerics.LinearAlgebra.Vector<double>>(vector, unit);
         }
 
         private static QuantityBase MultiplyVectorDouble(QuantityBase left, QuantityBase right)

@@ -3,6 +3,7 @@ using Moa.Units;
 using Moa.Units.Catalogs;
 using Moa.Units.Catalogs.SI;
 using Moa.Units.Quantities;
+using Moa.Units.Units;
 
 namespace BasicExample
 {
@@ -24,8 +25,9 @@ namespace BasicExample
             CalculateDensityOfHumanBody();
             CalculatePressureUnderWater();
             DivideQuantitiesWithSameUnits();
+            DimensionsOfQuantities();
         }
-
+        
         private void MultiplyLengthToFormVolume()
         {
             // Combine Area and Length to form Volume
@@ -69,8 +71,8 @@ namespace BasicExample
 
         private void CalculatePressureUnderWater()
         {
-            var densityUnit = UnitCombiner.Divide(StandardUnitsCatalog.Kilogram, StandardUnitsCatalog.CubicMeter);
-            var accelerationUnit = UnitCombiner.Divide(StandardUnitsCatalog.MetersPerSecond, StandardUnitsCatalog.Second);
+            var densityUnit = new UnitCreator(StandardUnitsCatalog.Kilogram).Divide(StandardUnitsCatalog.CubicMeter).Create();
+            var accelerationUnit = new UnitCreator(StandardUnitsCatalog.MetersPerSecond).Divide(StandardUnitsCatalog.Second).Create();
             var depth = new Quantity<double>(30.0, StandardUnitsCatalog.Meter);
             var density = new Quantity<double>(1000.0, densityUnit);
             var gravity = new Quantity<double>(9.81, accelerationUnit);
@@ -83,8 +85,7 @@ namespace BasicExample
 
         private void DivideQuantitiesWithSameUnits()
         {
-            var myPascal = UnitCombiner.Divide(StandardUnitsCatalog.Kilogram,
-                UnitCombiner.Multiply(StandardUnitsCatalog.Second, UnitCombiner.Multiply(StandardUnitsCatalog.Second, StandardUnitsCatalog.Meter)));
+            var myPascal = new UnitCreator(StandardUnitsCatalog.Kilogram).Divide(StandardUnitsCatalog.Meter, StandardUnitsCatalog.Second, StandardUnitsCatalog.Second).Create();
             var dividend = new Quantity<double>(782.0, StandardUnitsCatalog.Pascal);
             var divisor = new Quantity<double>(100.0, myPascal);
             var result = dividend/divisor;
@@ -94,6 +95,18 @@ namespace BasicExample
             Console.WriteLine();
         }
 
+        private void DimensionsOfQuantities()
+        {
+            var area = new Quantity<double>(10.0, StandardUnitsCatalog.SquareMeter);
+            var length = new Quantity<double>(10.0, StandardUnitsCatalog.Meter);
+
+            Console.WriteLine("--- Dimensions of quantities ---");
+            Console.WriteLine("Area {0} has dimension '{1}'", area, area.Dimension);
+            Console.WriteLine("Deduced area {0} * {1} = {2} has dimension '{3}'", length, length, length * length, (length * length).Dimension);
+            Console.WriteLine("Area dimension is '{0}'", StandardDimensionsCatalog.Area);
+            Console.WriteLine();
+
+        }
 
         static void Main(string[] args)
         {

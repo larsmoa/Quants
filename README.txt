@@ -122,6 +122,8 @@ Future work
 
 - Extend IUnit and IDimension to enable the units to look up equivalent units/dimensions.
   Add conversion on IUnit
+  
+- Better support for casting quantities, e.g. casting Quantity<float> to Quantity<double>.
 
 -------------------------------------------------
 Differences between Boost.Units and this library

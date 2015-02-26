@@ -112,11 +112,6 @@ namespace Moa.Units.Catalogs
         public static readonly IUnit Liter;
 
         /// <summary>
-        /// Pascal is a Pressure. Composite of Kilogram / (Meter * Second * Second)
-        /// </summary>
-        public static readonly IUnit Pascal;
-
-        /// <summary>
         /// MetersPerSecond is a Speed. Composite of Meter / Second.
         /// </summary>
         public static readonly IUnit MetersPerSecond;
@@ -125,6 +120,21 @@ namespace Moa.Units.Catalogs
         /// KilometersPerHour is a Speed. Composite of Kilometer / Hour.
         /// </summary>
         public static readonly IUnit KilometersPerHour;
+
+        /// <summary>
+        /// Newton is a Force. Composite of (Kilogram * Meter) / (Second * Second).
+        /// </summary>
+        public static readonly IUnit Newton;
+
+        /// <summary>
+        /// Joule is an Energy. Composite of Newton * Meter
+        /// </summary>
+        public static readonly IUnit Joule;
+
+        /// <summary>
+        /// Pascal is a Pressure. Composite of Newton / (Meter * Meter)
+        /// </summary>
+        public static readonly IUnit Pascal;
 
         static StandardUnitsCatalog()
         {
@@ -168,12 +178,18 @@ namespace Moa.Units.Catalogs
             CubicMeter = new UnitCreator().Multiply(Meter, Meter, Meter).Create();
             Liter = new UnitCreator().Multiply(Desimeter, Desimeter, Desimeter).Create();
 
-            // Pressure
-            Pascal = new UnitCreator().Multiply(Kilogram).Divide(Meter, Second, Second).Create();
-
             // Speed
             MetersPerSecond = new UnitCreator().Multiply(Meter).Divide(Second).Create();
             KilometersPerHour = new UnitCreator().Multiply(Kilometer).Divide(Hour).Create();
+
+            // Force
+            Newton = new UnitCreator().Multiply(Kilogram, Meter).Divide(Second, Second).Create();
+
+            // Pressure
+            Pascal = new UnitCreator().Multiply(Newton).Divide(Meter, Meter).Create();
+
+            // Energy
+            Joule = new UnitCreator().Multiply(Newton, Meter).Create();
         }
     }
 }

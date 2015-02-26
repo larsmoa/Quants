@@ -83,6 +83,9 @@ namespace Moa.Units.Catalogs.SI
             AddArea(si);
             AddVolume(si);
             AddPressure(si);
+            AddSpeed(si);
+            AddForce(si);
+            AddEnergy(si);
             return si;
         }
 
@@ -164,11 +167,25 @@ namespace Moa.Units.Catalogs.SI
             si.AddDimension(StandardDimensionsCatalog.Pressure);
             si.AddBaseUnit(StandardUnitsCatalog.Pascal);
         }
-            //        Assert.True(system.SupportsDimension(StandardDimensionsCatalog.Pressure));
-            //Assert.True(system.SupportsDimension(StandardDimensionsCatalog.Volume));
-            //Assert.True(system.SupportsDimension(StandardDimensionsCatalog.Speed));
-            //Assert.True(system.SupportsDimension(StandardDimensionsCatalog.Force));
-            //Assert.True(system.SupportsDimension(StandardDimensionsCatalog.Energy));
+
+        private static void AddSpeed(UnitSystem si)
+        {
+            si.AddDimension(StandardDimensionsCatalog.Speed);
+            si.AddBaseUnit(StandardUnitsCatalog.MetersPerSecond);
+            AddScaledUnit(si, StandardUnitsCatalog.MetersPerSecond, StandardUnitsCatalog.KilometersPerHour, 1.0 / 3.6);
+        }
+
+        private static void AddForce(UnitSystem si)
+        {
+            si.AddDimension(StandardDimensionsCatalog.Force);
+            si.AddBaseUnit(StandardUnitsCatalog.Newton);
+        }
+
+        private static void AddEnergy(UnitSystem si)
+        {
+            si.AddDimension(StandardDimensionsCatalog.Energy);
+            si.AddBaseUnit(StandardUnitsCatalog.Joule);
+        }
 
         #endregion
 

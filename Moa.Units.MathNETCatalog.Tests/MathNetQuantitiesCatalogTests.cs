@@ -1,4 +1,5 @@
-﻿using MathNet.Numerics.LinearAlgebra.Double;
+﻿using MathNet.Numerics.LinearAlgebra;
+using MathNet.Numerics.LinearAlgebra.Double;
 using Moa.Units;
 using Moa.Units.MathNETCatalog;
 using Moa.Units.Quantities;
@@ -16,13 +17,13 @@ namespace Tests.Moa.Units.MathNETCatalog
             // Arrange
             MathNetQuantitiesCatalog.Setup();
             IUnit unit = new Mock<IUnit>().Object;
-            Matrix leftMatrix = new DenseMatrix(10, 15);
-            Matrix rightMatrix = new DenseMatrix(15, 5);
-            Quantity<Matrix> left = new Quantity<Matrix>(leftMatrix, unit);
-            Quantity<Matrix> right = new Quantity<Matrix>(rightMatrix, unit);
+            Matrix<double> leftMatrix = new DenseMatrix(10, 15);
+            Matrix<double> rightMatrix = new DenseMatrix(15, 5);
+            Quantity<Matrix<double>> left = new Quantity<Matrix<double>>(leftMatrix, unit);
+            Quantity<Matrix<double>> right = new Quantity<Matrix<double>>(rightMatrix, unit);
 
             // Act
-            Quantity<Matrix> result = left*right as Quantity<Matrix>;
+            Quantity<Matrix<double>> result = left * right as Quantity<Matrix<double>>;
 
             // Assert
             Assert.NotNull(result);
@@ -37,13 +38,13 @@ namespace Tests.Moa.Units.MathNETCatalog
             // Arrange
             MathNetQuantitiesCatalog.Setup();
             IUnit unit = new Mock<IUnit>().Object;
-            Matrix leftMatrix = new DenseMatrix(10, 15);
+            Matrix<double> leftMatrix = new DenseMatrix(10, 15);
             Vector rightVector = new DenseVector(15);
-            Quantity<Matrix> left = new Quantity<Matrix>(leftMatrix, unit);
-            Quantity<Vector> right = new Quantity<Vector>(rightVector, unit);
+            Quantity<Matrix<double>> left = new Quantity<Matrix<double>>(leftMatrix, unit);
+            Quantity<Vector<double>> right = new Quantity<Vector<double>>(rightVector, unit);
 
             // Act
-            Quantity<Vector> result = left * right as Quantity<Vector>;
+            Quantity<Vector<double>> result = left * right as Quantity<Vector<double>>;
 
             // Assert
             Assert.NotNull(result);
@@ -57,13 +58,13 @@ namespace Tests.Moa.Units.MathNETCatalog
             // Arrange
             MathNetQuantitiesCatalog.Setup();
             IUnit unit = new Mock<IUnit>().Object;
-            Vector leftVector = new DenseVector(10);
-            Matrix rightMatrix = new DenseMatrix(10, 15);
-            Quantity<Vector> left = new Quantity<Vector>(leftVector, unit);
-            Quantity<Matrix> right = new Quantity<Matrix>(rightMatrix, unit);
+            Vector<double> leftVector = new DenseVector(10);
+            Matrix<double> rightMatrix = new DenseMatrix(10, 15);
+            Quantity<Vector<double>> left = new Quantity<Vector<double>>(leftVector, unit);
+            Quantity<Matrix<double>> right = new Quantity<Matrix<double>>(rightMatrix, unit);
 
             // Act
-            Quantity<Vector> result = left * right as Quantity<Vector>;
+            Quantity<Vector<double>> result = left * right as Quantity<Vector<double>>;
 
             // Assert
             Assert.NotNull(result);
@@ -77,12 +78,12 @@ namespace Tests.Moa.Units.MathNETCatalog
             // Arrange
             MathNetQuantitiesCatalog.Setup();
             IUnit unit = new Mock<IUnit>().Object;
-            Matrix rightMatrix = new DenseMatrix(10, 15);
+            Matrix<double> rightMatrix = new DenseMatrix(10, 15);
             Quantity<float> left = new Quantity<float>(2.0f, unit);
-            Quantity<Matrix> right = new Quantity<Matrix>(rightMatrix, unit);
+            Quantity<Matrix<double>> right = new Quantity<Matrix<double>>(rightMatrix, unit);
 
             // Act
-            Quantity<Matrix> result = left * right as Quantity<Matrix>;
+            Quantity<Matrix<double>> result = left * right as Quantity<Matrix<double>>;
 
             // Assert
             Assert.NotNull(result);
