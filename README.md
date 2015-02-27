@@ -22,8 +22,8 @@ a unit system.
 Dimensions are "unit categories". Dimensions describe what a
 quantity measures, but not how. "Length" and "Mass" are examples
 of dimensions. Dimensions can be combined to form complex 
-dimensions, such as "Area" = "Length"*"Length" or 
-"Speed" = "Length"/"Time".
+dimensions, such as Area = Length**Length or 
+Speed = Length/Time.
 
 The base interface for dimensions is IDimension. New dimensions
 are typically created from the BaseDimension-implementation. There 
@@ -35,8 +35,8 @@ Units are bound to one dimension and describes how a physical
 quantity is stored. Examples of units for "Length" are "meter" 
 and "feet" while "kg" and "lbs" are typical units for the "Mass"
 dimension. Units can be combined to form complex units of complex
-dimensions, such as "liter"="dm"*"dm"*"dm" in the 
-"Volume"="Length"*"Length"*"Length" dimension.
+dimensions, such as liter=dm**dm**dm in the 
+Volume=Length**Length**Length dimension.
 
 Value converters are provided to be able to convert between units 
 within the same dimension.
@@ -53,7 +53,7 @@ division.
 Note that care should be taken when combining (through arithmetic) quantities
 with different units. It is e.g. perfectly legal and possible to combine quanties
 of different units, but equal dimensions (e.g. "meter" and "feet"). Computations such as
-"5.0*m"*"0.5*ft" are one example of this. Although perfectly valid, the framework
+"5.0 m ** 0.5 ft" are one example of this. Although perfectly valid, the framework
 currently does not (out of the box) support converting this to e.g. "m^2".
 
 Adding or subtracting quantities of different units are naturally not support - even
@@ -72,9 +72,9 @@ regular arithmitics on the values and manually create units for the result, e.g.
 
     p = v*t + (1/2)*a*t*t
 
-If you know that the units of v is "m/s", t is "s" and a is "m/(s*s)", it's clear that
+If you know that the units of v is "m/s", t is "s" and a is "m/(s**s)", it's clear that
 the resulting unit will be "m". If only the dimensions are known up front, not units, some
-optimization could be gained by only determining the units from one of the terms, e.g. "v*t".
+optimization could be gained by only determining the units from one of the terms, e.g. "v**t".
 This will work as it is required that quantities have the same unit when adding and substracting.
 
 In addition to the three concepts above (Dimensions, Units and Quantities) there's a few
@@ -105,8 +105,8 @@ See BasicExample.csproj.
 
 ## Future work
 - Its not possible to perform arithmetic operations using quantities with the
-  same dimension, but different units. An example of this is "1 m * 2 cm" where
-  one would expect "1 m * 0.01 m = 0.01 m^2". Another example is "1 m^3 - 1000 dm^3"
+  same dimension, but different units. An example of this is "1 m ** 2 cm" where
+  one would expect "1 m ** 0.01 m = 0.01 m^2". Another example is "1 m^3 - 1000 dm^3"
   where one would expect "0 m^3".
   
 - Add support for custom symbols and name for derived dimensions. Currently
