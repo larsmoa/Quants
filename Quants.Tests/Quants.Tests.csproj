@@ -64,7 +64,7 @@
     <Compile Include="Dimensions\CompoundDimensionTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Moa.Units\Quants.csproj">
+    <ProjectReference Include="..\Quants\Quants.csproj">
       <Project>{7D29D6D7-6DE9-4192-8052-FB6C77E624E9}</Project>
       <Name>Quants</Name>
     </ProjectReference>

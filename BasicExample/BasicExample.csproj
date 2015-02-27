@@ -48,11 +48,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Moa.Units.Catalogs\Quants.Catalogs.csproj">
+    <ProjectReference Include="..\Quants.Catalogs\Quants.Catalogs.csproj">
       <Project>{194fb1ad-cb6a-4cea-891e-a730617eed4f}</Project>
       <Name>Quants.Catalogs</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Moa.Units\Quants.csproj">
+    <ProjectReference Include="..\Quants\Quants.csproj">
       <Project>{7d29d6d7-6de9-4192-8052-fb6c77e624e9}</Project>
       <Name>Quants</Name>
     </ProjectReference>

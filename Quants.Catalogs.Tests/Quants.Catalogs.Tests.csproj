@@ -57,11 +57,11 @@
     <Compile Include="StandardQuantitiesCatalogTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Moa.Units.Catalogs\Quants.Catalogs.csproj">
+    <ProjectReference Include="..\Quants.Catalogs\Quants.Catalogs.csproj">
       <Project>{194FB1AD-CB6A-4CEA-891E-A730617EED4F}</Project>
       <Name>Quants.Catalogs</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Moa.Units\Quants.csproj">
+    <ProjectReference Include="..\Quants\Quants.csproj">
       <Project>{7D29D6D7-6DE9-4192-8052-FB6C77E624E9}</Project>
       <Name>Quants</Name>
     </ProjectReference>
